@@ -1,0 +1,14 @@
+{
+  "name": "image-random-api",
+  "version": "1.0.0",
+  "description": "random images from unique URL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Heitor Dobeis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
