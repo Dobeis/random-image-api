@@ -25,5 +25,5 @@ app.use('/', (req, res) => {
 })
 
 app.listen(3000, () => {
-  console.log('API - Online')
+  console.log('api is running ..')
 })
