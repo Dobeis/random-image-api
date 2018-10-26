@@ -20,8 +20,8 @@ const images = [
 ]
 
 app.use('/', (req, res) => {
-  const randomImage = images[Math.floor(Math.random() * images.length)]
-  res.redirect(randomImage)
+  const image = images[Math.floor(Math.random() * images.length)]
+  res.redirect(image)
 })
 
 app.listen(3000, () => {
