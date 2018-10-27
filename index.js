@@ -19,8 +19,26 @@ const images = [
   'https://s3.amazonaws.com/picknoffice-home-images/laptop-notebook-computer-macbook-mac-work-592444-pxhere.com.jpg'
 ]
 
+const blurredImages = [
+  'https://s3.amazonaws.com/picknoffice-home-images/blurred/01.jpg',
+  'https://s3.amazonaws.com/picknoffice-home-images/blurred/02.jpg',
+  'https://s3.amazonaws.com/picknoffice-home-images/blurred/03.jpg',
+  'https://s3.amazonaws.com/picknoffice-home-images/blurred/04.jpg',
+  'https://s3.amazonaws.com/picknoffice-home-images/blurred/05.jpg',
+  'https://s3.amazonaws.com/picknoffice-home-images/blurred/06.jpg',
+  'https://s3.amazonaws.com/picknoffice-home-images/blurred/07.jpg',
+  'https://s3.amazonaws.com/picknoffice-home-images/blurred/08.jpg',
+  'https://s3.amazonaws.com/picknoffice-home-images/blurred/09.jpg',
+  'https://s3.amazonaws.com/picknoffice-home-images/blurred/10.jpg'
+]
+
 app.use('/', (req, res) => {
   const image = images[Math.floor(Math.random() * images.length)]
+  res.redirect(image)
+})
+
+app.use('/blurred', (req, res) => {
+  const image = blurredImages[Math.floor(Math.random() * blurredImages.length)]
   res.redirect(image)
 })
 
