@@ -32,14 +32,14 @@ const blurredImages = [
   'https://s3.amazonaws.com/picknoffice-home-images/blurred/10.jpg'
 ]
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
   const image = images[Math.floor(Math.random() * images.length)]
   res.redirect(image)
 })
 
-app.use('/blurred', (req, res) => {
-  const image = blurredImages[Math.floor(Math.random() * blurredImages.length)]
-  res.redirect(image)
+app.get('/blurred', (req, res) => {
+  const imageBlur = blurredImages[Math.floor(Math.random() * blurredImages.length)]
+  res.redirect(imageBlur)
 })
 
 app.listen(3000, () => {
